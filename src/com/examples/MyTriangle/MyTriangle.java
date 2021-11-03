@@ -37,10 +37,10 @@ public class MyTriangle {
         double d2 = v1.distance(v3);
         double d3 = v2.distance(v3);
 
-        if (d1 == d2 && d2 == d3) {
+        if (Double.compare(d1, d2) == 0  &&  Double.compare(d2, d3) == 0) {
             return "Equilateral";
         }
-        else if (d1 == d2 || d1 == d3 || d2 == d3) {
+        else if (Double.compare(d1, d2) == 0 || Double.compare(d1, d3) == 0 || Double.compare(d2, d3) == 0) {
             return "Isosceles";
         }
         return "Scalene";
