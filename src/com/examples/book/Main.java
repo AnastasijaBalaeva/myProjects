@@ -1,6 +1,9 @@
 package com.examples.book;
 
 
+import com.examples.Ball.Ball;
+import com.examples.Ball.Container;
+
 import java.util.Arrays;
 
 public class Main {
@@ -33,5 +36,26 @@ public class Main {
         System.out.println("toString book " + book2.toString());
         System.out.println("AuthorName book " + book2.getAuthorNames());
 
+        // equals and hashCode
+        Author[] authors1 = new Author[]{new Author("Ivanov", "Ivanov@gmail.com", 'm'),
+                new Author("Petrov", "Petrov@gmail.com", 'm')
+        };
+        Author[] authors2 = new Author[]{new Author("Ivanov", "Ivanov@gmail.com", 'm'),
+                new Author("Petrov", "Petrov@gmail.com", 'm')
+        };
+
+        System.out.println(authors1 == authors2);
+        System.out.println(authors1.equals(authors2));
+        System.out.println("authors1 hashCode " + authors1.hashCode());
+        System.out.println("authors2 hashCode " + authors2.hashCode());
+
+        Book book3 = new Book("book1",  authors, 150.0);
+        Book book4 = new Book("book1",  authors, 150.0);
+        System.out.println(book3 == book4);
+        System.out.println(book3.equals(book4));
+        System.out.println("book3 hashCode " + book3.hashCode());
+        System.out.println("book4 hashCode " + book4.hashCode());
+
+        System.out.println(book3.equals(authors1));
     }
 }

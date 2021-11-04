@@ -1,5 +1,7 @@
 package com.examples.MyComplex;
 
+import com.examples.employee.Employee;
+
 public class Main {
     public static void main(String[] args)
     {
@@ -54,6 +56,12 @@ public class Main {
         System.out.println("conjugate = " + myComplex2.conjugate());
         System.out.println("_____________");
 
+        MyComplex myComplex3 = new MyComplex(5.0, 5.0);
+        MyComplex myComplex4 = new MyComplex(5.0, 5.0);
 
+        System.out.println(myComplex3 == myComplex4);
+        System.out.println(myComplex3.equals(myComplex4));
+        System.out.println("myComplex3 hashCode " + myComplex3.hashCode());
+        System.out.println("myComplex4 hashCode " + myComplex4.hashCode());
     }
 }

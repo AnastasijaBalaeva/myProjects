@@ -1,5 +1,7 @@
 package com.examples.MyPoint;
 
+import com.examples.Ball.Ball;
+
 import java.util.Arrays;
 
 public class Main {
@@ -35,6 +37,15 @@ public class Main {
         System.out.println("distance from this point to the given  instance MyPoint = " + myPoint1.distance(new MyPoint(6,6)));
         System.out.println("distance from this point to (0,0) = " + myPoint1.distance());
 
+        MyPoint myPoint2 = new MyPoint();
+        MyPoint myPoint3 = new MyPoint();
+
+        System.out.println(myPoint2 == myPoint3);
+        System.out.println(myPoint2.equals(myPoint3));
+        System.out.println("myPoint2 hashCode " + myPoint2.hashCode());
+        System.out.println("myPoint3 hashCode " + myPoint3.hashCode());
 
     }
+
+
 }

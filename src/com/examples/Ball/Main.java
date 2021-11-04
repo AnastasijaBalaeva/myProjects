@@ -31,5 +31,23 @@ public class Main {
                 container.coliders(ball);
                 System.out.println(ball);
         }
+        // equals and hashCode
+        Ball ball1 = new Ball(10, 10, 5, 3, 2);
+        Ball ball2 = new Ball(10, 10, 5, 3, 2);
+
+        System.out.println(ball1 == ball2);
+        System.out.println(ball1.equals(ball2));
+        System.out.println("ball1 hashCode " + ball1.hashCode());
+        System.out.println("ball2 hashCode " + ball2.hashCode());
+
+        Container container1 = new Container(0, 0, 20, 20);
+        Container container2 = new Container(0, 0, 20, 20);
+        System.out.println(container1 == container2);
+        System.out.println(container1.equals(container2));
+        System.out.println("container1 hashCode " + container1.hashCode());
+        System.out.println("container2 hashCode " + container2.hashCode());
+
+        System.out.println(ball1.equals(container2));
+
     }
 }

@@ -1,5 +1,7 @@
 package com.examples.rectangle;
 
+import com.examples.MyPoint.MyPoint;
+import com.examples.MyTriangle.MyTriangle;
 import com.examples.circle.Circle;
 
 public class Main {
@@ -22,5 +24,13 @@ public class Main {
         System.out.println("getAreas = " + rectangle2.getArea());
         System.out.println("getPerimeter = " + rectangle2.getPerimeter());
         System.out.println("toString = " + rectangle2.toString());
+
+        Rectangle rectangle3 = new Rectangle(4.0f, 5.0f);
+        Rectangle rectangle4 = new Rectangle(4.0f, 5.0f);
+
+        System.out.println(rectangle3 == rectangle4);
+        System.out.println(rectangle3.equals(rectangle4));
+        System.out.println("rectangle3 hashCode " + rectangle3.hashCode());
+        System.out.println("rectangle4 hashCode " + rectangle4.hashCode());
     }
 }

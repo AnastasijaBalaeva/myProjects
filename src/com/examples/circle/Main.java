@@ -1,5 +1,7 @@
 package com.examples.circle;
 
+import com.examples.Ball.Ball;
+
 public class Main {
     public static void main(String[] args){
 
@@ -24,6 +26,15 @@ public class Main {
         System.out.println("color = " + circle3.getColor());
         System.out.println("toString = " + circle3.toString());
         System.out.println("getAreas = " + circle3.getArea());
+
+        Circle circle4 = new Circle(3.0);
+        Circle circle5 = new Circle(3.0);
+
+        System.out.println(circle4 == circle5);
+        System.out.println(circle4.equals(circle5));
+        System.out.println("circle4 hashCode " + circle4.hashCode());
+        System.out.println("circle5 hashCode " + circle5.hashCode());
+
     }
 }
 
