@@ -29,7 +29,7 @@ public class TestList {
 
         long time4 = System.nanoTime();
         for (int i=0; i<num;i++){
-            array.add(0,i);
+            array.add(0,0);
         }
         long time5 = System.nanoTime();
         for (int i=0; i<num;i++){
