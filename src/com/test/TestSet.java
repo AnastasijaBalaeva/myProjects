@@ -10,7 +10,7 @@ public class TestSet {
         LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet<Integer>();
         TreeSet<Integer> treeSet = new TreeSet<Integer>();
 
-        int n = 1000;
+        int n = 10000;
         int num =10;
 
         long time1 = System.nanoTime();

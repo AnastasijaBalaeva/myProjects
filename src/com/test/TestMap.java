@@ -10,7 +10,7 @@ public class TestMap {
         LinkedHashMap<Integer,Integer> linkedHashMap = new LinkedHashMap<>();
         TreeMap<Integer, Integer> treeMap = new TreeMap<>();
 
-        int n = 1000;
+        int n = 10000;
         int num = 10;
 
         long time1 = System.nanoTime();
