@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Форма пользователя для заполнения</h1>
+<form action="#" th:action="@{/userForm}" th:object="${userForm}" method="post">
+    <p>Фамилия: <input type="text" th:field="*{surname}" required/></p>
+    <p>Имя: <input type="text" th:field="*{name}" required/></p>
+    <p>Отчество: <input type="text" th:field="*{patronymic}" required/></p>
+    <p>Возраст: <input type="number" min="0" max="100" th:field="*{age}" required/></p>
+    <p>Зарплата: <input type="number" min="0" th:field="*{salary}" required/></p>
+    <p>Место работы: <input type="text" th:field="*{job}" required/></p>
+    <p>E-mail: <input type="email" th:field="*{email}"
+                      pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" required/></p>
+    <p><input type="submit" value="Добавить пользователя"/></p>
+</form>
+<form id="search" action="#" th:action="@{/search}" method="post" enctype="multipart/form-data">
+    <p><input type="submit" value="Поиск Пользователя"/></p>
+</form>
+<form id="loaded" action="#" th:action="@{/loaded}" method="post" enctype="multipart/form-data">
+    <p><input type="submit" value="Загрузить пользователей из файла"/></p>
+</form>
+
+<form id="email_send" action="#" th:action="@{/email_send}" method="post" enctype="multipart/form-data">
+    <p><input type="submit" value="Отправить письмо"/></p>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Отправка почты</title>
+</head>
+<body>
+<h1>Отправка почты</h1>
+<form action="#" th:action="@{/emailForm}" th:object="${emailForm}" method="post">
+    <p>Кому: <input type="text"  th:field="*{addressee}" required/></p>
+    <p>Тема письма: <input type="text" th:field="*{theme}"  required/></p>
+    <p>Сообщение: <input type="text" th:field="*{message}" required/></p>
+    <p><input type="reset" value="Очистить"/> <input type="submit" value="Отправить"/></p>
+</form>
+</body>
+</html>

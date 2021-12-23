@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Загрузка файла</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Загрузка файла</h1>
+<label for="upload">Структура заполнения файла: Фамилия/Имя/Отчество/Возраст/Зарплата/Место работы/Email
+    <br>
+    Пример заполнения файла: Балаева/Анастасия/Алексеевна/24/56000/ННИИРТ/balaeva9anastasija@gmail.com
+</label>
+<br>
+<br>
+<form id="upload" action="#" th:action="@{/upload}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file"/>
+    <p><input type="submit" value="Загрузить файл"/></p>
+</form>
+<a href="/userForm">Главная страница</a>
+<a href="/loaded">Загрузить пользователей из файла</a>
+</body>
+</html>

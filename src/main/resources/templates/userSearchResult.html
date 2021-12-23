@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск пользователя</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Найденный пользователь:</h1>
+
+    <!--/*@thymesVar id="userForm" type=""*/-->
+    <p th:text="'Фамилия: ' + ${userForm.surname}"></p>
+    <p th:text="'Имя: ' + ${userForm.name}"></p>
+    <p th:text="'Отчество: ' + ${userForm.patronymic}"></p>
+    <p th:text="'Возраст: ' + ${userForm.age}"></p>
+    <p th:text="'Зарплата: ' + ${userForm.salary}"></p>
+    <p th:text="'Место работы: ' + ${userForm.job}"></p>
+    <p th:text="'E-mail: ' + ${userForm.email}"></p>
+    <p th:text="'Текущее время: ' + ${infoBrowser.nowTime} " ></p>
+    <p th:text="'Имя браузера: ' + ${infoBrowser.userAgent} "></p>
+<a href="/userSearch">Поиск пользователя</a>
+<a href="/userForm">Главная страница</a>
+</body>
+</html>

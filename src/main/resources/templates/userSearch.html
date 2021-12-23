@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск пользователя</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Поиск пользователя</h1>
+<form action="#" th:action="@{/userSearch}" th:object="${userForm}" method="post">
+    <label for="surname">Заполните поля для поиска:</label>
+    <p>Фамилия: <input type="text"id="surname" th:field="*{surname}"/></p>
+    <p>Имя: <input type="text"id="name" th:field="*{name}"/></p>
+    <p><input type="submit" value="Поиск"/></p>
+</form>
+<p><a href="/userForm">Главная страница</a></p>
+</body>
+</html>
